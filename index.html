@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessica Coulson</title>
+    <link rel="icon" type="image/x-icon" href="assets/flower-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav class="nav-wrap", id="desktop-nav">
+        <!-- flower logo -->
+        <a class="nav-logo" href="#home" aria-label="Home">
+            <span class="nav-logo-icon" aria-hidden="true">✿</span>
+        </a>
+
+        <!-- tabs -->
+        <ul class="nav-tabs" role="tablist">
+            <li><a class="tab" href="#about" role="tab">ABOUT</a></li>
+            <li><a class="tab" href="#experience" role="tab">EXPERIENCE</a></li>
+            <li><a class="tab" href="#projects" role="tab">PROJECTS</a></li>
+        </ul>
+
+        <!-- theme button -->
+        <button class="nav-action" id="themeBtn" onclick="changeTheme()" aria-label="Toggle theme"></button>
+
+
+    </nav>
+
+    <nav id="hamburger-nav" class="mobile-nav" aria-label="Primary">
+        <!-- logo button -->
+        <button class="hamburger-icon" id="logoBtn"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="logoMenu"
+                aria-label="Open menu"
+                onclick="openMenu(this)">
+            <span class="nav-logo-icon" aria-hidden="true">✿</span>
+        </button>
+
+        <!-- vertical menu -->
+        <ul id="logoMenu" class="menu-links" hidden role="menu" aria-label="Navigation">
+            <li><a role="menuitem" href="#about">ABOUT</a></li>
+            <li><a role="menuitem" href="#experience">EXPERIENCE</a></li>
+            <li><a role="menuitem" href="#projects">PROJECTS</a></li>
+        </ul>
+
+        <button class="nav-action" id="themeBtn" onclick="changeTheme()" aria-label="Toggle theme"></button>
+    </nav>
+    <section id="profile">
+
+        <div class="section__text">
+            <img class="profile-img" src="assets/notion-face.png" alt="Jessica Coulson" width="120" height="120">
+            <h1 class="section__title">Hello, I'm <mark class="hi"><em>Jessica Coulson</em></mark>
+            </h1>
+            <p class="section__text__p2">Bioengineering & Applied AI @ McGill University</p>
+            
+            <div class="btn-container">
+
+                <a class="text-link resume-link"
+                    href="./assets/JessicaCoulson_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Resume (opens PDF)">
+                    RESUME
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                </a>
+
+                <a class="text-link resume-link"
+                    href="#contact"
+                    aria-label="Contact">
+                    CONTACT
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">About</p>
+        <p class="details">
+            I'm a fourth year student at McGill Unversity with dual Canadian-US citizenship, interested in medtech and passionate about developing treatments for 
+            neurodegenerative diseases. On campus, I'm involved in the <mark class="hitext">Conference on Diversity in Engineering</mark> and <mark class="hitext">
+            Promoting Opportunities for Women in Engineering</mark>. 
+        </p>
+        <p class="details">
+            <br>
+            In my free time, I play piano and violin in the <mark class="hitext">Classical Music Club</mark> and <mark class="hitext">Beethoven Orchestra</mark>. My favorite's include Liszt's Liebestraum No.3 on piano and Dvorak's New World Symphony in orchestra. 
+            I also love playing and watching tennis (go FAA)!
+        </p>
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">Experience
+            
+            <ul class="xp-simple">
+                <li>
+                    <strong>ML Research Intern</strong> • Mila Quebec AI Institute
+                    <span class="time">Sept 2025–Present</span>
+                    <p>Mapping Alzheimer's markers to MRI features to cross-validate single-cell transcriptomic profiles</p>
+                    <div class="xp-tags"><span>Python</span><span>Jupyter Notebooks</span></div>
+                </li>
+                <li>
+                    <strong>Signal Processing Intern</strong> • RI-MUHC
+                    <span class="time">May–Aug 2025</span>
+                    <p>Developed pipeline to process EDA, BVP, TEMP signals for resident-dancer dyads.</p>
+                    <div class="xp-tags"><span>MATLAB</span><span>Python</span></div>
+                </li>
+                <li>
+                    <strong>Research Intern</strong> • McGill
+                    <span class="time">May–Aug 2024</span>
+                    <p>Designed <em>in vitro</em> experiments to model pathological calcification.</p>
+                    <div class="xp-tags"><span>SEM</span><span>FT-IR</span><span>Raman Spectroscopy</span><span>JMP (SAS)</span></div>
+                </li>
+            </ul>
+        </p>
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Projects</p>
+        <ul class="proj-grid">
+            <!-- SpeakEZ -->
+            <li class="proj">
+                <a class="thumb" target="_blank" rel="noopener">
+                <img src="assets/speakEZ-cover.png" alt="SpeakEZ cover">
+                </a>
+                <div class="meta">
+                <h3 class="name">SpeakEZ</h3>
+                <p class="desc">AI interview coach that provides instant feedback on speech and body language.</p>
+                <div class="xp-tags">
+                    <span>Python</span><span>Whisper</span><span>OpenCV</span><span>Streamlit</span>
+                </div>
+                <div class="links">
+                    <a class="text-link" href="https://devpost.com/software/speakez-ia10sh" target="_blank" rel="noopener">
+                    Devpost
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </a>
+                    <a class="text-link" href="https://github.com/leticiahuang/MAIS2025" target="_blank" rel="noopener">
+                    GitHub
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </a>
+                </div>
+                </div>
+            </li>
+            <!-- Kaleido -->
+            <li class="proj">
+                <a class="thumb" aria-label="Project link">
+                <img src="assets/kaleido-screenshot.png" alt="Kaleido project cover">
+                </a>
+                <div class="meta">
+                <h3 class="name">Kaleido</h3>
+                <p class="desc">AI tool to streamline consultant to project matching process.</p>
+                <div class="xp-tags">
+                    <span>Figma</span>
+                </div>
+                <div class="links">
+                    <a class="text-link" href="#" target="_blank" rel="noopener">
+                    Slides
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </a>
+                </div>
+                </div>
+            </li>
+            <!-- BIAPT -->
+            <li class="proj">
+                <a class="thumb" target="_blank" rel="noopener">
+                <img src="assets/biapt-screenshot.png" alt="BIAPT Poster">
+                </a>
+                <div class="meta">
+                <h3 class="name">Interpersonal Physiological Synchrony Pipeline</h3>
+                <p class="desc">Process EDA, HR, TEMP signals; measure synchrony of dyads.</p>
+                <div class="xp-tags">
+                    <span>MATLAB</span><span>Python</span>
+                </div>
+                <div class="links">
+                    <a class="text-link" href="./assets/BIEN471_Poster.pdf" target="_blank" rel="noopener">
+                    Poster
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </a>
+                </div>
+                </div>
+            </li>
+
+            <!-- SURE -->
+            <li class="proj">
+                <a class="thumb" aria-label="Project link">
+                <img src="assets/sure-screenshot.png" alt="SURE poster">
+                </a>
+                <div class="meta">
+                <h3 class="name">In Vitro Pathological Calcification Synthesis</h3>
+                <p class="desc">Bench-to-web writeup with figures and notes.</p>
+                <div class="xp-tags">
+                    <span>MATLAB</span><span>JMP (SAS)</span>
+                </div>    
+                <div class="links">
+                    <a class="text-link" href="assets/SURE Poster.pdf" target="_blank" rel="noopener">
+                    Poster
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </a>
+                </div>
+                </div>
+            </li>
+        </ul>
+  </div>
+</section>
+    </section>
+    <section id="contact">
+        <p class="section__text__p1">Contact</p>
+        <p class="section__text__p2">Let's get in touch! 
+            <a href="mailto:jessica.coulson@mail.mcgill.ca"><mark class="hi"><em>jessica.coulson@mail.mcgill.ca</em></a>
+        </p>
+        
+        <div class="contact-links">
+
+            <a class="text-link resume-link"
+                href="https://www.linkedin.com/in/jessica-coulson-a99588260/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                LINKEDIN
+                <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <a class="text-link resume-link"
+                href="https://github.com/jessyico"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Resume (opens PDF)">
+                GITHUB
+                <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy Jessica Coulson 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
