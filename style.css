@@ -6,8 +6,8 @@
     --bg: white; 
     --text:rgb(0, 0, 0); 
 
-    --hi:rgb(253, 230, 240);
-    --hitext:rgb(116, 43, 76);
+    --hi:rgb(225, 248, 246);
+    --hitext:rgb(45, 135, 127);
 
     --bar:#ffffff; 
     --border:#2a2b2f; 
@@ -16,26 +16,26 @@
 
     --textp: rgb(0, 0, 0);
 
-    --accent:#ae406c;
-    --textaccent: rgb(254, 211, 238);
-    --button: #ae406c;
+    --accent:rgb(51, 138, 139);
+    --textaccent: rgb(211, 254, 238);
+    --button: rgb(27, 85, 81);
 }
 
 :root[data-theme="rose"]{
-  --bg:#ae406c; 
+  --bg:rgb(27, 85, 81); 
   --text:white; 
 
-  --hi: rgb(199, 108, 151);
+  --hi: rgb(51, 150, 142);
   --hitext:rgb(255, 255, 255);
 
-  --bar:#ae406c;
+  --bar:rgb(43, 116, 95);
   --border:rgba(0,0,0,.25);
-  --pill:#c85883;
+  --pill:rgb(43, 116, 95);
   --wrap: 700px;
 
   --textp: rgb(255, 255, 255) ;
 
-  --accent: rgb(254, 211, 238);
+  --accent: rgb(211, 254, 250);
   --textaccent: black;
   --button: white;
 }
@@ -404,7 +404,7 @@ section {
 }
 .text-link .arrow{ width:1.1em; height:1.1em; translate:0 1px; transition: transform .18s ease; }
 .text-link:hover::after{ transform: scaleX(1.06); }
-.text-link:hover .arrow{ transform: translate(.06rem,-.06rem); color:rgb(255, 167, 196);}
+.text-link:hover .arrow{ transform: translate(.06rem,-.06rem); color:rgb(137, 206, 211);}
 
 
 #experience .section__title{ font-size: 2rem; margin-bottom: 12px; }
